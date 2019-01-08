@@ -72,6 +72,9 @@ $start = $time;
             <!-- signbox-header -->
             <div class="signbox-body">
                 <form name="login" action="login.php" method="post">
+                    <?php if(isset($_SESSION['alert']['status'])){ ?>
+                        <?php echo $_SESSION['alert']['message']; ?> <hr>
+                    <?php } ?>
                     <div class="form-group">
                         <label class="form-control-label">Email:</label>
                         <input type="email" name="email" placeholder="Enter your email" class="form-control">
