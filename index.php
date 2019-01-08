@@ -69,21 +69,20 @@ include("inc/functions.php");
 
 <body class='login'>
 	<div class="wrapper">
-		<h1>
-			<a href="index.html">
-				<img src="img/logo-big.png" alt="" class='retina-ready' width="59" height="49">FLAT</a>
+		<h1 style="color: white; text-align: center;">
+			<?php echo $site['title']; ?>
 		</h1>
 		<div class="login-body">
-			<h2>SIGN IN</h2>
-			<form action="index.html" method='get' class='form-validate' id="test">
+			<h2>Sign In</h2>
+			<form action="login.php" method='post' class='form-validate' id="test">
 				<div class="form-group">
 					<div class="email controls">
-						<input type="text" name='uemail' placeholder="Email address" class='form-control' data-rule-required="true" data-rule-email="true">
+						<input type="text" name='email' placeholder="Email address" class='form-control' data-rule-required="true" data-rule-email="true">
 					</div>
 				</div>
 				<div class="form-group">
 					<div class="pw controls">
-						<input type="password" name="upw" placeholder="Password" class='form-control' data-rule-required="true">
+						<input type="password" name="password" placeholder="Password" class='form-control' data-rule-required="true">
 					</div>
 				</div>
 				<div class="submit">
