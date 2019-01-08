@@ -118,26 +118,64 @@ if($_GET['dev'] == 'yes'){
             </div>
         </div>
 
-        <div id="main">
-            <div class="container-fluid">
-                
-                <div class="row">
-                    <div class="col-sm-12">
-                        <div class="box box-color box-bordered">
-                            <div class="box-title">
-                                <h3>
-                                    <i class="fa fa-user"></i>
-                                    Sample Title
-                                </h3>
-                            </div>
-                            <div class="box-content">
-                                Sample Content
+        <?php
+            $c = $_GET['c'];
+            switch ($c){
+                // test
+                case "test":
+                    test();
+                    break;
+                    
+                // home
+                default:
+                    home();
+                    break;
+            }
+        ?>
+
+        <?php function home(){ ?>
+            <div id="main">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="box box-color box-bordered">
+                                <div class="box-title">
+                                    <h3>
+                                        <!-- <i class="fa fa-user"></i> -->
+                                        Sample Title
+                                    </h3>
+                                </div>
+                                <div class="box-content">
+                                    Sample Content
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
+        <?php } ?>
+
+        <?php function test(){ ?>
+            <div id="main">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="box box-color box-bordered">
+                                <div class="box-title">
+                                    <h3>
+                                        <!-- <i class="fa fa-user"></i> -->
+                                        Test Title
+                                    </h3>
+                                </div>
+                                <div class="box-content">
+                                    Test Content
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <?php } ?>
     </div>
     <div id="footer">
         <p>
