@@ -1,3 +1,8 @@
+<?php
+
+include("inc/global_vars.php");
+
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -25,11 +30,11 @@
     <meta property="og:image:height" content="600">
 
     <!-- Meta -->
-    <meta name="description" content="Premium Quality and Responsive UI for Dashboard.">
+    <meta name="description" content="Reach 1.5B Potential Customers Today!">
     <meta name="author" content="ThemePixels">
 
 
-    <title>Shamcey Responsive Bootstrap 4 Admin Template</title>
+    <title><?php echo $site['title']; ?></title>
 
     <!-- Vendor css -->
     <link href="lib/font-awesome/css/font-awesome.css" rel="stylesheet">
@@ -44,8 +49,8 @@
     <div class="signpanel-wrapper">
       <div class="signbox">
         <div class="signbox-header">
-          <h2>WhatsApp Pro Mailer</h2>
-          <p class="mg-b-0">Reach 1.5B Potential Customers</p>
+          <h2><?php echo $site['title']; ?></h2>
+          <p class="mg-b-0">Reaching 1.5B Potential Customers</p>
         </div><!-- signbox-header -->
         <div class="signbox-body">
           <div class="form-group">
