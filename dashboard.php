@@ -104,12 +104,6 @@ if($_GET['dev'] == 'yes'){
     <div class="container-fluid" id="content">
         <div id="left">
             <div class="subnav">
-                <div class="subnav-title">
-                    <a href="#" class='toggle-subnav'>
-                        <i class="fa fa-angle-down"></i>
-                        <span>Content</span>
-                    </a>
-                </div>
                 <ul class="subnav-menu">
                     <li class="active">
                         <a href="<?php echo $site['url']; ?>/dashboard">Dashboard</a>
