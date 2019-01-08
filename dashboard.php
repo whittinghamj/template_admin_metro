@@ -58,7 +58,7 @@ if($_GET['dev'] == 'yes'){
     <link rel="stylesheet" href="css/style.css">
 
     <!-- Color CSS -->
-    <link rel="stylesheet" href="css/themes.css">
+    <link rel="stylesheet" href="css/darkblue.css">
 
     <!-- jQuery -->
     <script src="js/jquery.min.js"></script>
@@ -421,6 +421,7 @@ if($_GET['dev'] == 'yes'){
                             </li>
                         </ul>
                     </li>
+                    
                     <li class='dropdown colo'>
                         <a href="#" class='dropdown-toggle' data-toggle="dropdown">
                             <i class="fa fa-tint"></i>
