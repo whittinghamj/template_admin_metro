@@ -57,6 +57,7 @@ curl_close($ch);
 
 $results = json_decode($data, true);
 
+debug($whmcs);
 debug($data);
 debug($results);
 
