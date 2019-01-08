@@ -31,27 +31,29 @@ $start = $time;
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Twitter -->
+    <!--
     <meta name="twitter:site" content="@themepixels">
     <meta name="twitter:creator" content="@themepixels">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Shamcey">
     <meta name="twitter:description" content="Premium Quality and Responsive UI for Dashboard.">
     <meta name="twitter:image" content="http://themepixels.me/shamcey/img/shamcey-social.png">
+    -->
 
     <!-- Facebook -->
     <meta property="og:url" content="http://themepixels.me/shamcey">
     <meta property="og:title" content="Shamcey">
     <meta property="og:description" content="Premium Quality and Responsive UI for Dashboard.">
 
-    <meta property="og:image" content="http://themepixels.me/shamcey/img/shamcey-social.png">
-    <meta property="og:image:secure_url" content="http://themepixels.me/shamcey/img/shamcey-social.png">
+    <meta property="og:image" content="<?php echo $site['url'].'/img/whatsapp-icon.png'; ?>">
+    <meta property="og:image:secure_url" content="<?php echo $site['url'].'/img/whatsapp-icon.png'; ?>">
     <meta property="og:image:type" content="image/png">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="600">
 
     <!-- Meta -->
     <meta name="description" content="Reach 1.5B Potential Customers Today!">
-    <meta name="author" content="ThemePixels">
+    <meta name="author" content="Genex Networks LLC">
 
     <title>
         <?php echo $site['title']; ?>
