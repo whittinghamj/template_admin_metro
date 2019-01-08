@@ -61,7 +61,7 @@ if($_GET['dev'] == 'yes'){
     <link rel="stylesheet" href="css/themes.css">
 
     <!-- Favicon -->
-    <link rel="shortcut icon" href="img/favicon.ico" />
+    <link rel="shortcut icon" href="img/whatsapp-icon.png?v=1" />
 
     <!-- Apple devices Homescreen icon -->
     <link rel="apple-touch-icon-precomposed" href="img/apple-touch-icon-precomposed.png" />
