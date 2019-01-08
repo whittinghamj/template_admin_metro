@@ -88,7 +88,7 @@ if($_GET['dev'] == 'yes'){
                     </a>
                     <ul class="dropdown-menu pull-right">
                         <li>
-                            <a href="<?php echo $site['url']; ?>/dashboard?c=profile">Edit profile</a>
+                            <a href="<?php echo $site['url']; ?>/dashboard?c=profile">Edit Profile</a>
                         </li>
                         <!--
                             <li>
