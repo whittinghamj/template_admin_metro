@@ -638,15 +638,15 @@ if($_GET['dev'] == 'yes'){
                 <div class="breadcrumbs">
                     <ul>
                         <li>
-                            <a href="more-login.html">Home</a>
+                            <a href="/dashboard">Dashboard</a>
                             <i class="fa fa-angle-right"></i>
                         </li>
                         <li>
-                            <a href="layouts-sidebar-hidden.html">Layouts</a>
+                            <a href="/dashboard?c=dev">Dev</a>
                             <i class="fa fa-angle-right"></i>
                         </li>
                         <li>
-                            <a href="layouts-footer.html">Footer</a>
+                            Template
                         </li>
                     </ul>
                     <div class="close-bread">
