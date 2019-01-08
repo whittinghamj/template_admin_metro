@@ -104,7 +104,9 @@ if($results["result"]=="success"){
 
 	$data = json_decode($data, true);
 
-	// debug($data);
+	debug($data);
+
+	die();
 
 	foreach($data['products']['product'] as $product)
 	{
