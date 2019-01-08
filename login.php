@@ -99,10 +99,6 @@ if($results["result"]=="success")
 
 	$data = json_decode($data, true);
 
-	debug($data);
-
-	die();
-
 	foreach($data['products']['product'] as $product)
 	{
 		if (in_array($product['pid'], $product_ids)) {
