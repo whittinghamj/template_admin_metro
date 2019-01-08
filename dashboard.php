@@ -632,11 +632,6 @@ if($_GET['dev'] == 'yes'){
 
         <div id="main">
             <div class="container-fluid">
-                <div class="page-header">
-                    <div class="pull-left">
-                        <h1>Site with footer</h1>
-                    </div>
-                </div>
                 <div class="breadcrumbs">
                     <ul>
                         <li>
