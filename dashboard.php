@@ -646,7 +646,7 @@ if($_GET['dev'] == 'yes'){
                             <i class="fa fa-angle-right"></i>
                         </li>
                         <li>
-                            Template
+                            <a href="#">Template</a>
                         </li>
                     </ul>
                     <div class="close-bread">
