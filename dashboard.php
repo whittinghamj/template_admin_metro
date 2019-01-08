@@ -29,8 +29,9 @@ if(empty($_SESSION['account']['id'])){
 // get account details for logged in user
 $account_details = account_details($_SESSION['account']['id']);
 
-debug($account_details);
-die();
+if($_GET['dev'] == 'yes'){
+    debug($account_details);
+}
 
 ?>
 <!DOCTYPE html>
@@ -64,7 +65,9 @@ die();
     <meta name="author" content="ThemePixels">
 
 
-    <title>Shamcey Responsive Bootstrap 4 Admin Template</title>
+    <title>
+        <?php echo $site['title']; ?>
+    </title>
 
     <!-- Vendor css -->
     <link href="lib/font-awesome/css/font-awesome.css" rel="stylesheet">
