@@ -638,7 +638,7 @@ if($_GET['dev'] == 'yes'){
                 <div class="breadcrumbs">
                     <ul>
                         <li>
-                            <a href="/dashboard">Dashboard</a>
+                            <a href="<?php echo $site['url']; ?>/dashboard">Dashboard</a>
                             <i class="fa fa-angle-right"></i>
                         </li>
                         <li>
