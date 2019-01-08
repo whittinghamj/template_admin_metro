@@ -430,6 +430,33 @@ function get_product_ids($uid)
 	return $pids;
 }
 
+function check_products($id){
+	global $whmcs, $site;
+	
+	$postfields["username"] 			= $whmcs['username'];
+	$postfields["password"] 			= $whmcs['password'];
+	$postfields["responsetype"] 		= "json";
+	$postfields["action"] 				= "getclientsproducts";
+	$postfields["clientid"] 			= $id;
+	
+	$ch = curl_init();
+	curl_setopt($ch, CURLOPT_URL, $whmcs['url']);
+	curl_setopt($ch, CURLOPT_POST, 1);
+	curl_setopt($ch, CURLOPT_TIMEOUT, 100);
+	curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+	curl_setopt($ch, CURLOPT_POSTFIELDS, $postfields);
+	$data = curl_exec($ch);
+	curl_close($ch);
+	
+	$data = json_decode($data);
+	$api_result = $data->result;
+	
+	return $data->products->product;
+	// $clientid = $data->clientid;
+	// $product_name = $data->products->product[0]->name;
+	//$product_status = strtolower($data->products->product[0]->status);
+}
+
 function get_gravatar($email)  
 {  
     $image = 'http://www.gravatar.com/avatar.php?gravatar_id='.md5($email);
