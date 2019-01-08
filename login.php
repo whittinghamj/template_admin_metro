@@ -8,13 +8,6 @@
 // }
 
 include("inc/global_vars.php");
-
-// start timer for page loaded var
-$time = microtime();
-$time = explode(' ', $time);
-$time = $time[1] + $time[0];
-$start = $time;
-
 include('inc/functions.php');
 
 $ip 							= $_SERVER['REMOTE_ADDR'];
@@ -25,9 +18,6 @@ $now = time();
 $email 							= post('email');
 $password 						= post('password');
 
-echo $email.'<hr>';
-echo $password.'<br>';
-
 $postfields["username"] 		= $whmcs['username']; 
 $postfields["password"] 		= $whmcs['password'];
 $postfields["action"] 			= "validatelogin";
@@ -36,9 +26,6 @@ $postfields["password2"] 		= $password;
 $postfields["responsetype"] 	= 'json';
 $postfields['accesskey']		= $whmcs['accesskey'];
 
-debug($postfields);
-
-// ok this looks like a WHMCS login attemp, lets process it.
 $ch = curl_init();
 curl_setopt($ch, CURLOPT_URL, $whmcs['url']);
 curl_setopt($ch, CURLOPT_POST, 1);
@@ -49,17 +36,22 @@ curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
 curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, false);
 curl_setopt($ch, CURLOPT_POSTFIELDS, $postfields);
 $data = curl_exec($ch);
-debug($ch);
 
 curl_close($ch);
 
 $results = json_decode($data, true);
 
+echo '<h3>$whmcs</h3>';
 debug($whmcs);
+
+echo '<h3>$data</h3>';
 debug($data);
+
+echo '<h3>$results</h3>';
 debug($results);
 
-if($results["result"]=="success"){
+if($results["result"]=="success")
+{
     // login confirmed
 	
 	$_SESSION['account']['id'] 		= $results['userid'];
