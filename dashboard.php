@@ -103,14 +103,6 @@ if($_GET['dev'] == 'yes'){
     </div>
     <div class="container-fluid" id="content">
         <div id="left">
-            <form action="search-results.html" method="GET" class='search-form'>
-                <div class="search-pane">
-                    <input type="text" name="search" placeholder="Search here...">
-                    <button type="submit">
-                        <i class="fa fa-search"></i>
-                    </button>
-                </div>
-            </form>
             <div class="subnav">
                 <div class="subnav-title">
                     <a href="#" class='toggle-subnav'>
@@ -119,7 +111,7 @@ if($_GET['dev'] == 'yes'){
                     </a>
                 </div>
                 <ul class="subnav-menu">
-                    <li class='dropdown'>
+                    <li class='dropdown active'>
                         <a href="#" data-toggle="dropdown">Articles</a>
                         <ul class="dropdown-menu">
                             <li>
