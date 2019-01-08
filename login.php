@@ -7,13 +7,7 @@
 	ini_set('display_startup_errors', 1);
 // }
 
-include("inc/db.php");
 include("inc/global_vars.php");
-include("inc/sessions.php");
-$sess = new SessionManager();
-session_start();
-
-echo "includes loaded and session started. <br>";
 
 // start timer for page loaded var
 $time = microtime();
