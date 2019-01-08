@@ -275,9 +275,9 @@ if($_GET['dev'] == 'yes'){
                                             <tr>
                                                 <th>Number</th>
                                                 <th>Name</th>
-                                                <th class='hidden-350'>Platform(s)</th>
-                                                <th class='hidden-1024'>Engine version</th>
-                                                <th class='hidden-480'>CSS grade</th>
+                                                <th class='hidden-350'>Status</th>
+                                                <th class='hidden-350'>Engine version</th>
+                                                <th class='hidden-350'>CSS grade</th>
                                                 <th>Actions</th>
                                             </tr>
                                         </thead>
@@ -286,16 +286,16 @@ if($_GET['dev'] == 'yes'){
                                                 <td>1-384-555-0382</td>
                                                 <td>US Number</td>
                                                 <td class='hidden-350'>Win 95+</td>
-                                                <td class='hidden-1024'>4</td>
-                                                <td class='hidden-480'>X</td>
+                                                <td class='hidden-350'>4</td>
+                                                <td class='hidden-350'>X</td>
                                                 <td>Edit</td>
                                             </tr>
                                             <tr>
                                                 <td>07399973949</td>
                                                 <td>UK Number</td>
                                                 <td class='hidden-350'>N800</td>
-                                                <td class='hidden-1024'>-</td>
-                                                <td class='hidden-480'>A</td>
+                                                <td class='hidden-350'>-</td>
+                                                <td class='hidden-350'>A</td>
                                                 <td>Edit</td>
                                             </tr>
                                         </tbody>
