@@ -29,8 +29,9 @@ if(empty($_SESSION['account']['id'])){
 // get account details for logged in user
 $account_details = account_details($_SESSION['account']['id']);
 
-dubug($account_details);
+debug($account_details);
 die();
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
