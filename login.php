@@ -7,8 +7,14 @@ if($_GET['dev'] == 'yes'){
 	ini_set('display_startup_errors', 1);
 }
 
+include("inc/db.php");
 include("inc/global_vars.php");
-include('inc/functions.php');
+include("inc/sessions.php");
+
+$sess = new SessionManager();
+session_start();
+
+include("inc/functions.php");
 
 $ip 							= $_SERVER['REMOTE_ADDR'];
 $user_agent     				= $_SERVER['HTTP_USER_AGENT'];
@@ -116,8 +122,6 @@ if($results["result"]=="success")
 				$url 				= $whmcsurl."?email=$email&timestamp=$timestamp&hash=$hash&goto=".urlencode($goto);
 				go($url);
 			}else{
-				include("inc/db.php");
-
 				$query = "SELECT * FROM `user_data` WHERE `user_id` = '".$user_id."' " ;
 				$result = mysql_query($query) or die(mysql_error());
 				$total_rows = mysql_num_rows($result);

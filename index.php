@@ -9,8 +9,11 @@ if($_GET['dev'] == 'yes'){
 include("inc/db.php");
 include("inc/global_vars.php");
 include("inc/sessions.php");
+
 $sess = new SessionManager();
 session_start();
+
+include("inc/functions.php");
 
 // start timer for page loaded var
 $time = microtime();

@@ -5,20 +5,20 @@ if($_GET['dev'] == 'yes'){
   ini_set('error_reporting', E_ALL);
 }
 
-include('inc/db.php');
-include('inc/sessions.php');
+include("inc/db.php");
+include("inc/global_vars.php");
+include("inc/sessions.php");
+
 $sess = new SessionManager();
 session_start();
+
+include("inc/functions.php");
 
 // start timer for page loaded var
 $time = microtime();
 $time = explode(' ', $time);
 $time = $time[1] + $time[0];
 $start = $time;
-
-// includes
-include('inc/global_vars.php');
-include('inc/functions.php');
 
 // check is account->id is set, if not then assume user is not logged in correctly and redirect to login page
 if(empty($_SESSION['account']['id'])){
