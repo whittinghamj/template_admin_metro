@@ -133,9 +133,9 @@ if($_GET['dev'] == 'yes'){
                     profile();
                     break;
 
-                // sending_numbers
-                case "sending_numbers":
-                    sending_numbers();
+                // sender_numbers
+                case "sender_numbers":
+                    sender_numbers();
                     break;
 
                 // campaigns
@@ -234,6 +234,29 @@ if($_GET['dev'] == 'yes'){
                                 </div>
                                 <div class="box-content">
                                     Campaign Content
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <?php } ?>
+
+        <?php function sender_numbers(){ ?>
+            <?php global $account_details; ?>
+            <div id="main">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="box box-color box-bordered">
+                                <div class="box-title">
+                                    <h3>
+                                        <!-- <i class="fa fa-user"></i> -->
+                                        Sender Numbers
+                                    </h3>
+                                </div>
+                                <div class="box-content">
+                                    Sender Numbers Content
                                 </div>
                             </div>
                         </div>
