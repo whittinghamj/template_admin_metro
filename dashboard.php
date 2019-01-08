@@ -98,7 +98,7 @@ if($_GET['dev'] == 'yes'){
                             </li>
                         -->
                         <li>
-                            <a href="<?php echo $site['url']; ?>/logout">Sign out</a>
+                            <a href="<?php echo $site['url']; ?>/logout">Sign Out</a>
                         </li>
                     </ul>
                 </div>
@@ -178,11 +178,11 @@ if($_GET['dev'] == 'yes'){
                                 <div class="box-title">
                                     <h3>
                                         <!-- <i class="fa fa-user"></i> -->
-                                        Sample Title
+                                        Dashboard
                                     </h3>
                                 </div>
                                 <div class="box-content">
-                                    Sample Content
+                                    Content coming soon.
                                 </div>
                             </div>
                         </div>
