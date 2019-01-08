@@ -107,13 +107,27 @@ if($_GET['dev'] == 'yes'){
         <div id="left">
             <div class="subnav">
                 <ul class="subnav-menu">
-                    <li class="active">
+                    <?php if(empty($_GET['c']) || $_GET['c'] == '' || $_GET['c'] == 'home'){ ?>
+                        <li class="active">
+                    <?php }else{ ?>
+                        <li>
+                    <?php } ?>
                         <a href="<?php echo $site['url']; ?>/dashboard">Dashboard</a>
                     </li>
-                    <li>
+                    
+                    <?php if($_GET['c'] == 'sender_numbers'){ ?>
+                        <li class="active">
+                    <?php }else{ ?>
+                        <li>
+                    <?php } ?>
                         <a href="<?php echo $site['url']; ?>/dashboard?c=sender_numbers">Sender Numbers</a>
                     </li>
-                    <li>
+
+                    <?php if($_GET['c'] == 'campaigns'){ ?>
+                        <li class="active">
+                    <?php }else{ ?>
+                        <li>
+                    <?php } ?>
                         <a href="<?php echo $site['url']; ?>/dashboard?c=campaigns">Campaigns</a>
                     </li>
                 </ul>
