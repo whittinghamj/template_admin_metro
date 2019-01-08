@@ -80,7 +80,7 @@ if($_GET['dev'] == 'yes'){
 
 <body>
     <div class="sh-logopanel">
-        <a href="" class="sh-logo-text">Jamie</a>
+        <a href="" class="sh-logo-text"><?php echo $site['name_long']; ?></a>
         <a id="navicon" href="" class="sh-navicon d-none d-xl-block"><i class="icon ion-navicon"></i></a>
         <a id="naviconMobile" href="" class="sh-navicon d-xl-none"><i class="icon ion-navicon"></i></a>
     </div>
