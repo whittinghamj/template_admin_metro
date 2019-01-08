@@ -130,7 +130,7 @@ if($_GET['dev'] == 'yes'){
                                     Sample Title
                                 </h3>
                             </div>
-                            <div class="box-content nopadding">
+                            <div class="box-content">
                                 Sample Content
                             </div>
                         </div>
