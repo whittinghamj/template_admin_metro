@@ -164,20 +164,19 @@ if($_GET['dev'] == 'yes'){
             }
         ?>
 
-        <div class="alert alert-danger alert-nomargin">
-            <button type="button" class="close" data-dismiss="alert">&times;</button>
-            <h4>Important!</h4>
-            This table comes with 2500 entries.
-            <strong>Look at the incredible performance</strong>
-            . Only the current visible rows are rendered and via ajax loaded.
-        </div>
-
         <?php function home(){ ?>
             <?php global $account_details; ?>
             <div id="main">
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col-sm-12">
+                            <div class="alert alert-danger alert-nomargin">
+                                <button type="button" class="close" data-dismiss="alert">&times;</button>
+                                <h4>Important!</h4>
+                                This table comes with 2500 entries.
+                                <strong>Look at the incredible performance</strong>
+                                . Only the current visible rows are rendered and via ajax loaded.
+                            </div>
                             <div class="box box-color box-bordered">
                                 <div class="box-title">
                                     <h3>
