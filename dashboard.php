@@ -88,13 +88,13 @@ if($_GET['dev'] == 'yes'){
                     </a>
                     <ul class="dropdown-menu pull-right">
                         <li>
-                            <a href="more-userprofile.html">Edit profile</a>
+                            <a href="<?php echo $site['url']; ?>/dashboard?c=profile">Edit profile</a>
                         </li>
                         <li>
-                            <a href="#">Account settings</a>
+                            <a href="<?php echo $site['url']; ?>/dashboard?c=settings">Account settings</a>
                         </li>
                         <li>
-                            <a href="more-login.html">Sign out</a>
+                            <a href="<?php echo $site['url']; ?>/logout">Sign out</a>
                         </li>
                     </ul>
                 </div>
@@ -285,6 +285,7 @@ if($_GET['dev'] == 'yes'){
                 <div class="page-header">
                     
                 </div>
+
                 <div class="breadcrumbs">
                     <ul>
                         <li>
