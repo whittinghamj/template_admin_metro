@@ -37,7 +37,13 @@ curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, false);
 curl_setopt($ch, CURLOPT_POSTFIELDS, $postfields);
 $data = curl_exec($ch);
 if ($data === false) $data = curl_error($ch);
- echo stripslashes($data);
+	echo stripslashes($data);
+
+// Check for errors and display the error message
+if($errno = curl_errno($ch)) {
+    $error_message = curl_strerror($errno);
+    echo "cURL error ({$errno}):\n {$error_message}";
+}
 
 curl_close($ch);
 
