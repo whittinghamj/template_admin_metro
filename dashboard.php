@@ -89,7 +89,7 @@ if($_GET['dev'] == 'yes'){
         <label class="sh-sidebar-label">Navigation</label>
         <ul class="nav">
             <li class="nav-item">
-                <a href="index.html" class="nav-link">
+                <a href="index.html" class="nav-link active">
                     <i class="icon ion-ios-home-outline"></i>
                     <span>Dashboard</span>
                 </a>
