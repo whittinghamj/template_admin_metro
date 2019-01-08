@@ -271,7 +271,7 @@ if($_GET['dev'] == 'yes'){
                     <div class="row">
                         <div class="col-sm-12">
                             <div id="status_message"></div>
-                            
+
                             <div class="box box-color box-bordered">
                                 <div class="box-title">
                                     <h3>
@@ -390,7 +390,7 @@ if($_GET['dev'] == 'yes'){
 
     <?php if(!empty($_SESSION['alert']['status'])){ ?>
         <script>
-            document.getElementById('status_message').innerHTML = '<div class="alert alert-<?php echo $_SESSION['alert']['status']; ?> alert-nomargin"><button type="button" class="close" data-dismiss="alert">&times;</button><?php echo $_SESSION['alert']['message']; ?></div>';
+            document.getElementById('status_message').innerHTML = '<div class="col-sm-12"><div class="alert alert-<?php echo $_SESSION['alert']['status']; ?> alert-nomargin"><button type="button" class="close" data-dismiss="alert">&times;</button><?php echo $_SESSION['alert']['message']; ?></div></div>';
             setTimeout(function() {
                 $('#status_message').fadeOut('fast');
             }, 5000);
