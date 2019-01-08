@@ -40,6 +40,8 @@ $postfields["password2"] 		= $password;
 $postfields["responsetype"] 	= 'json';
 $postfields['accesskey']		= $whmcs['accesskey'];
 
+debug($postfields);
+
 // ok this looks like a WHMCS login attemp, lets process it.
 $ch = curl_init();
 curl_setopt($ch, CURLOPT_URL, $whmcs['url']);
@@ -55,6 +57,7 @@ curl_close($ch);
 
 $results = json_decode($data, true);
 
+debug($data);
 debug($results);
 
 if($results["result"]=="success"){
