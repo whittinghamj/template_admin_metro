@@ -17,8 +17,6 @@ $start = $time;
 
 include('inc/functions.php');
 
-debug($_POST);
-
 $ip 							= $_SERVER['REMOTE_ADDR'];
 $user_agent     				= $_SERVER['HTTP_USER_AGENT'];
 
@@ -26,6 +24,9 @@ $now = time();
 
 $email 							= post('email');
 $password 						= post('password');
+
+echo $email.'<hr>';
+echo $password.'<br>';
 
 $postfields["username"] 		= $whmcs['username']; 
 $postfields["password"] 		= $whmcs['password'];
