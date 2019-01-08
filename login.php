@@ -12,6 +12,8 @@ include("inc/sessions.php");
 $sess = new SessionManager();
 session_start();
 
+echo "includes loaded and session started. <br>";
+
 // start timer for page loaded var
 $time = microtime();
 $time = explode(' ', $time);
@@ -20,7 +22,7 @@ $start = $time;
 
 include('inc/functions.php');
 
-// debug($_POST);
+debug($_POST);
 
 $ip 							= $_SERVER['REMOTE_ADDR'];
 $user_agent     				= $_SERVER['HTTP_USER_AGENT'];
