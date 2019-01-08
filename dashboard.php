@@ -58,64 +58,13 @@ if($_GET['dev'] == 'yes'){
     <link rel="stylesheet" href="css/style.css">
 
     <!-- Color CSS -->
-    <link rel="stylesheet" href="css/darkblue.css">
-
-    <!-- jQuery -->
-    <script src="js/jquery.min.js"></script>
-
-    <!-- Nice Scroll -->
-    <script src="js/plugins/nicescroll/jquery.nicescroll.min.js"></script>
-
-    <!-- imagesLoaded -->
-    <script src="js/plugins/imagesLoaded/jquery.imagesloaded.min.js"></script>
-
-    <!-- jQuery UI -->
-    <script src="js/plugins/jquery-ui/jquery.ui.core.min.js"></script>
-    <script src="js/plugins/jquery-ui/jquery.ui.widget.min.js"></script>
-    <script src="js/plugins/jquery-ui/jquery.ui.mouse.min.js"></script>
-    <script src="js/plugins/jquery-ui/jquery.ui.resizable.min.js"></script>
-    <script src="js/plugins/jquery-ui/jquery.ui.sortable.min.js"></script>
-
-    <!-- slimScroll -->
-    <script src="js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
-
-    <!-- Bootstrap -->
-    <script src="js/bootstrap.min.js"></script>
-
-    <!-- Bootbox -->
-    <script src="js/plugins/bootbox/jquery.bootbox.js"></script>
-
-    <!-- Bootbox -->
-    <script src="js/plugins/form/jquery.form.min.js"></script>
-
-    <!-- Validation -->
-    <script src="js/plugins/validation/jquery.validate.min.js"></script>
-    <script src="js/plugins/validation/additional-methods.min.js"></script>
-
-    <!-- Theme framework -->
-    <script src="js/eakroko.min.js"></script>
-
-    <!-- Theme scripts -->
-    <script src="js/application.min.js"></script>
-
-    <!-- Just for demonstration -->
-    <script src="js/demonstration.min.js"></script>
-
-    <!--[if lte IE 9]>
-        <script src="js/plugins/placeholder/jquery.placeholder.min.js"></script>
-        <script>
-            $(document).ready(function() {
-                $('input, textarea').placeholder();
-            });
-        </script>
-    <![endif]-->
+    <link rel="stylesheet" href="css/themes.css">
 
     <!-- Favicon -->
     <link rel="shortcut icon" href="img/favicon.ico" />
 
     <!-- Apple devices Homescreen icon -->
     <link rel="apple-touch-icon-precomposed" href="img/apple-touch-icon-precomposed.png" />
-
 </head>
 
 <body>
@@ -421,7 +370,7 @@ if($_GET['dev'] == 'yes'){
                             </li>
                         </ul>
                     </li>
-                    
+
                     <li class='dropdown colo'>
                         <a href="#" class='dropdown-toggle' data-toggle="dropdown">
                             <i class="fa fa-tint"></i>
@@ -765,6 +714,56 @@ if($_GET['dev'] == 'yes'){
             <i class="fa fa-arrow-up"></i>
         </a>
     </div>
+
+    <!-- jQuery -->
+    <script src="js/jquery.min.js"></script>
+
+    <!-- Nice Scroll -->
+    <script src="js/plugins/nicescroll/jquery.nicescroll.min.js"></script>
+
+    <!-- imagesLoaded -->
+    <script src="js/plugins/imagesLoaded/jquery.imagesloaded.min.js"></script>
+
+    <!-- jQuery UI -->
+    <script src="js/plugins/jquery-ui/jquery.ui.core.min.js"></script>
+    <script src="js/plugins/jquery-ui/jquery.ui.widget.min.js"></script>
+    <script src="js/plugins/jquery-ui/jquery.ui.mouse.min.js"></script>
+    <script src="js/plugins/jquery-ui/jquery.ui.resizable.min.js"></script>
+    <script src="js/plugins/jquery-ui/jquery.ui.sortable.min.js"></script>
+
+    <!-- slimScroll -->
+    <script src="js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+
+    <!-- Bootstrap -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Bootbox -->
+    <script src="js/plugins/bootbox/jquery.bootbox.js"></script>
+
+    <!-- Bootbox -->
+    <script src="js/plugins/form/jquery.form.min.js"></script>
+
+    <!-- Validation -->
+    <script src="js/plugins/validation/jquery.validate.min.js"></script>
+    <script src="js/plugins/validation/additional-methods.min.js"></script>
+
+    <!-- Theme framework -->
+    <script src="js/eakroko.min.js"></script>
+
+    <!-- Theme scripts -->
+    <script src="js/application.min.js"></script>
+
+    <!-- Just for demonstration -->
+    <script src="js/demonstration.min.js"></script>
+
+    <!--[if lte IE 9]>
+        <script src="js/plugins/placeholder/jquery.placeholder.min.js"></script>
+        <script>
+            $(document).ready(function() {
+                $('input, textarea').placeholder();
+            });
+        </script>
+    <![endif]-->
 </body>
 
 </html>
