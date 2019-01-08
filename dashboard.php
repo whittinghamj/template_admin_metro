@@ -154,7 +154,118 @@ if($_GET['dev'] == 'yes'){
                                 </h3>
                             </div>
                             <div class="box-content">
-                                Sample Content
+                                <div class="box-content nopadding">
+                                    <ul class="timeline">
+                                        <li>
+                                            <div class="timeline-content">
+                                                <div class="left">
+                                                    <div class="icon">
+                                                        <i class="fa fa-picture-o"></i>
+                                                    </div>
+                                                    <div class="date">25. Apr</div>
+                                                </div>
+                                                <div class="activity">
+                                                    <div class="user">
+                                                        <a href="#">John Doe</a>
+                                                        <span>uploaded 12 new photos</span>
+                                                    </div>
+                                                    <ul class="timeline-images">
+                                                        <li>
+                                                            <a href="#">
+                                                                <img src="img/demo/1.jpg" alt="">
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#">
+                                                                <img src="img/demo/2.jpg" alt="">
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#">
+                                                                <img src="img/demo/3.jpg" alt="">
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#">
+                                                                <img src="img/demo/4.jpg" alt="">
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#">
+                                                                <img src="img/demo/5.jpg" alt="">
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="line"></div>
+                                        </li>
+                                        <li>
+                                            <div class="timeline-content">
+                                                <div class="left">
+                                                    <div class="icon green">
+                                                        <i class="fa fa-comment"></i>
+                                                    </div>
+                                                    <div class="date">18. Apr</div>
+                                                </div>
+                                                <div class="activity">
+                                                    <div class="user">
+                                                        <a href="#">John Doe</a>
+                                                        <span>added a new comment</span>
+                                                    </div>
+                                                    <p>
+                                                        Lorem ipsum Fugiat magna velit consectetur qui in veniam cillum exercitation Ut occaecat Duis mollit. Lorem ipsum Dolore dolor Excepteur sunt amet officia officia sunt aliquip id occaecat officia.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="line"></div>
+                                        </li>
+                                        <li>
+                                            <div class="timeline-content">
+                                                <div class="left">
+                                                    <div class="icon lightred">
+                                                        <i class="fa fa-camera"></i>
+                                                    </div>
+                                                    <div class="date">17. Apr</div>
+                                                </div>
+                                                <div class="activity">
+                                                    <div class="user">
+                                                        <a href="#">Jane Doe</a>
+                                                        <span>shared a video</span>
+                                                    </div>
+                                                    <p>
+                                                        <iframe width="640" height="390" src="http://www.youtube.com/embed/cvHxdn9OoX0" frameborder="0" allowfullscreen style="max-width:100%;"></iframe>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="line"></div>
+                                        </li>
+                                        <li>
+                                            <div class="timeline-content">
+                                                <div class="left">
+                                                    <div class="icon orange">
+                                                        <i class="fa fa-bullhorn"></i>
+                                                    </div>
+                                                    <div class="date">15. Apr</div>
+                                                </div>
+                                                <div class="activity">
+                                                    <div class="user">
+                                                        <a href="#">Jane Doe</a>
+                                                        <span>added a new article</span>
+                                                    </div>
+                                                    <p>
+                                                        Lorem ipsum Ad ullamco elit reprehenderit veniam aute minim dolore ullamco incididunt ea do. Lorem ipsum Reprehenderit do consectetur dolore do fugiat proident incididunt consequat minim ullamco. Lorem ipsum Proident laboris dolore in aliqua ut magna
+                                                        minim irure ut proident. Lorem ipsum Anim dolore incididunt aliquip do irure aute reprehenderit reprehenderit enim ut. Lorem ipsum Reprehenderit commodo anim laboris ex cupidatat dolor deserunt dolore exercitation Ut et culpa.
+                                                    </p>
+                                                    <p>Lorem ipsum Sit aliqua eu dolore laboris non consectetur sit qui laboris adipisicing nisi exercitation. Lorem ipsum Incididunt minim irure sit cillum in consequat voluptate est labore enim ut. Lorem ipsum Duis officia proident Ut cillum occaecat
+                                                        magna ad ad incididunt. Lorem ipsum Ullamco eiusmod aute sed id eiusmod in est id do deserunt quis. Lorem ipsum Quis proident Excepteur tempor commodo consectetur dolor ex cillum proident id. Lorem ipsum Veniam esse laborum ut in id officia
+                                                        velit voluptate aliquip deserunt.</p>
+                                                </div>
+                                            </div>
+                                            <div class="line"></div>
+                                        </li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
                     </div>
