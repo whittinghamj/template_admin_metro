@@ -1,11 +1,11 @@
 <?php
 
-// if($_GET['dev'] == 'yes'){
+if($_GET['dev'] == 'yes'){
   	error_reporting(E_ALL);
   	ini_set('error_reporting', E_ALL);
   	ini_set('display_errors', 1);
 	ini_set('display_startup_errors', 1);
-// }
+}
 
 include("inc/global_vars.php");
 include('inc/functions.php');
@@ -48,15 +48,6 @@ if($errno = curl_errno($ch)) {
 curl_close($ch);
 
 $results = json_decode($data, true);
-
-echo '<h3>$whmcs</h3>';
-debug($whmcs);
-
-echo '<h3>$data</h3>';
-debug($data);
-
-echo '<h3>$results</h3>';
-debug($results);
 
 if($results["result"]=="success")
 {
@@ -119,7 +110,7 @@ if($results["result"]=="success")
 
 		    if($product['status'] != 'Active'){
 				// forward to billing area
-				$whmcsurl 			= "https://clients.deltacolo.com/dologin.php";
+				$whmcsurl 			= "https://genexnetworks.net/billing/dologin.php";
 				$autoauthkey 		= "admin1372";
 				$email 				= $email;
 				
@@ -130,7 +121,9 @@ if($results["result"]=="success")
 				
 				$url 				= $whmcsurl."?email=$email&timestamp=$timestamp&hash=$hash&goto=".urlencode($goto);
 				go($url);
-			}else{	
+			}else{
+				include("inc/db.php");
+
 				$query = "SELECT * FROM `user_data` WHERE `user_id` = '".$user_id."' " ;
 				$result = mysql_query($query) or die(mysql_error());
 				$total_rows = mysql_num_rows($result);
@@ -139,7 +132,7 @@ if($results["result"]=="success")
 				
 				if($total_rows == 0){
 
-					$insert_query = "INSERT INTO `user_id` 
+					$insert_query = "INSERT INTO `user_data` 
 					(`added`, `user_id`)
 					VALUE
 					('".time()."', '".$user_id."')";
