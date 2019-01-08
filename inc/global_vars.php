@@ -1,7 +1,7 @@
 <?php
 
 // site vars
-$site['url']					= 'https://whittinghamj.com/projects/template_admin_metro/';
+$site['url']					= 'https://whittinghamj.com/projects/template_admin_metro';
 $site['title']					= 'WhatsApp Pro Mailer';
 $site['copyright']				= 'Written by Jamie Whittingham.';
 
