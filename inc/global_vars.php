@@ -13,7 +13,7 @@ $config['copyright']			= $site['copyright'];
 $site['name_long']				= 'WhatsApp<b>Pro</b>Mailer';
 $site['name_short']				= '<b>WPM</b>';
 
-$whmcs['url'] 					= "https://genexnetworks.net/billing/includes/api.php"; # URL to WHMCS API file
+$whmcs['url'] 					= "http://genexnetworks.net/billing/includes/api.php"; # URL to WHMCS API file
 $whmcs["username"] 				= "apiuser"; # Admin username goes here
 $whmcs["password"] 				= md5("dje773jeidkdje773jeidk"); # Admin password goes here  
 $whmcs['accesskey']				= 'admin1372';
