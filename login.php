@@ -53,7 +53,7 @@ curl_close($ch);
 
 $results = json_decode($data, true);
 
-// debug($results);
+debug($results);
 
 if($results["result"]=="success"){
     // login confirmed
