@@ -1,5 +1,4 @@
 <?php
-
 if($_GET['dev'] == 'yes'){
   error_reporting(E_ALL);
   ini_set('display_errors', 1);
@@ -14,108 +13,93 @@ $sess = new SessionManager();
 session_start();
 
 include("inc/functions.php");
-
-// start timer for page loaded var
-$time = microtime();
-$time = explode(' ', $time);
-$time = $time[1] + $time[0];
-$start = $time;
-
-?>
-<!DOCTYPE html>
-<html lang="en">
+?><!doctype html>
+<html>
 
 <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	<!-- Apple devices fullscreen -->
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<!-- Apple devices fullscreen -->
+	<meta names="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
-    <!-- Twitter -->
-    <!--
-    <meta name="twitter:site" content="@themepixels">
-    <meta name="twitter:creator" content="@themepixels">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Shamcey">
-    <meta name="twitter:description" content="Premium Quality and Responsive UI for Dashboard.">
-    <meta name="twitter:image" content="http://themepixels.me/shamcey/img/shamcey-social.png">
-    -->
+	<title><?php echo $site['title']; ?></title>
 
-    <!-- Facebook -->
-    <meta property="og:url" content="http://themepixels.me/shamcey">
-    <meta property="og:title" content="Shamcey">
-    <meta property="og:description" content="Premium Quality and Responsive UI for Dashboard.">
+	<!-- Bootstrap -->
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<!-- icheck -->
+	<link rel="stylesheet" href="css/plugins/icheck/all.css">
+	<!-- Theme CSS -->
+	<link rel="stylesheet" href="css/style.css">
+	<!-- Color CSS -->
+	<link rel="stylesheet" href="css/themes.css">
 
-    <meta property="og:image" content="<?php echo $site['url'].'/img/whatsapp-icon.png'; ?>">
-    <meta property="og:image:secure_url" content="<?php echo $site['url'].'/img/whatsapp-icon.png'; ?>">
-    <meta property="og:image:type" content="image/png">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="600">
 
-    <!-- Meta -->
-    <meta name="description" content="Reach 1.5B Potential Customers Today!">
-    <meta name="author" content="Genex Networks LLC">
+	<!-- jQuery -->
+	<script src="js/jquery.min.js"></script>
 
-    <title>
-        <?php echo $site['title']; ?>
-    </title>
+	<!-- Nice Scroll -->
+	<script src="js/plugins/nicescroll/jquery.nicescroll.min.js"></script>
+	<!-- Validation -->
+	<script src="js/plugins/validation/jquery.validate.min.js"></script>
+	<script src="js/plugins/validation/additional-methods.min.js"></script>
+	<!-- icheck -->
+	<script src="js/plugins/icheck/jquery.icheck.min.js"></script>
+	<!-- Bootstrap -->
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/eakroko.js"></script>
 
-    <!-- Vendor css -->
-    <link href="lib/font-awesome/css/font-awesome.css" rel="stylesheet">
-    <link href="lib/Ionicons/css/ionicons.css" rel="stylesheet">
+	<!--[if lte IE 9]>
+		<script src="js/plugins/placeholder/jquery.placeholder.min.js"></script>
+		<script>
+			$(document).ready(function() {
+				$('input, textarea').placeholder();
+			});
+		</script>
+	<![endif]-->
 
-    <!-- Shamcey CSS -->
-    <link rel="stylesheet" href="css/shamcey.css">
+
+	<!-- Favicon -->
+	<link rel="shortcut icon" href="img/favicon.ico" />
+	<!-- Apple devices Homescreen icon -->
+	<link rel="apple-touch-icon-precomposed" href="img/apple-touch-icon-precomposed.png" />
+
 </head>
 
-<body class="bg-gray-900">
-    <div class="signpanel-wrapper">
-        <div class="signbox">
-            <div class="signbox-header">
-                <h2><?php echo $site['title']; ?></h2>
-                <p class="mg-b-0">Reaching 1.5B Potential Customers</p>
-            </div>
-            <!-- signbox-header -->
-            <div class="signbox-body">
-                <form name="login" action="login.php" method="post">
-                    <?php if(isset($_SESSION['alert']['status'])){ ?>
-                        <center>
-                            <strong>
-                                <font color="red">
-                                    <?php echo $_SESSION['alert']['message']; ?>
-                                </font>
-                            </strong>
-                        </center>
-                        <hr>
-                    <?php } ?>
-                    <div class="form-group">
-                        <label class="form-control-label">Email:</label>
-                        <input type="email" name="email" placeholder="Enter your email" class="form-control">
-                    </div>
-                    <!-- form-group -->
-                    <div class="form-group">
-                        <label class="form-control-label">Password:</label>
-                        <input type="password" name="password" placeholder="Enter your password" class="form-control">
-                    </div>
-                    <!-- form-group -->
-                    <div class="form-group">
-                        <!-- <a href="">Forgot password?</a> -->
-                    </div>
-                    <!-- form-group -->
-                    <button class="btn btn-success btn-block">Sign In</button>
-                    <div class="tx-center bg-white bd pd-10 mg-t-40">Not yet a member? <a href="page-signup.html">Create an account</a></div>
-                </form>
-            </div>
-            <!-- signbox-body -->
-        </div>
-        <!-- signbox -->
-    </div>
-    <!-- signpanel-wrapper -->
-
-    <script src="lib/jquery/jquery.js"></script>
-    <script src="lib/popper.js/popper.js"></script>
-    <script src="lib/bootstrap/bootstrap.js"></script>
-
-    <script src="js/shamcey.js"></script>
+<body class='login'>
+	<div class="wrapper">
+		<h1>
+			<?php echo $site['title']; ?>
+		</h1>
+		<div class="login-body">
+			<h2>Sign In</h2>
+			<form action="login.php" method='post' class='form-validate' id="test">
+				<div class="form-group">
+					<div class="email controls">
+						<input type="text" name='email' placeholder="Email address" class='form-control' data-rule-required="true" data-rule-email="true">
+					</div>
+				</div>
+				<div class="form-group">
+					<div class="pw controls">
+						<input type="password" name="password" placeholder="Password" class='form-control' data-rule-required="true">
+					</div>
+				</div>
+				<div class="submit">
+					<div class="remember">
+						<input type="checkbox" name="remember" class='icheck-me' data-skin="square" data-color="blue" id="remember">
+						<label for="remember">Remember me</label>
+					</div>
+					<input type="submit" value="Sign me in" class='btn btn-primary'>
+				</div>
+			</form>
+			<div class="forget">
+				<a href="#">
+					<span>Forgot password?</span>
+				</a>
+			</div>
+		</div>
+	</div>
 </body>
 
 </html>
