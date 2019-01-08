@@ -74,6 +74,7 @@ if($_GET['dev'] == 'yes'){
             <a href="#" class="toggle-nav" rel="tooltip" data-placement="bottom" title="Toggle navigation">
                 <i class="fa fa-bars"></i>
             </a>
+            <!--
             <ul class='main-nav'>
                 <li>
                     <a href="index.html">
@@ -81,6 +82,7 @@ if($_GET['dev'] == 'yes'){
                     </a>
                 </li>
             </ul>
+            -->
             <div class="user">
                 <div class="dropdown">
                     <a href="#" class='dropdown-toggle' data-toggle="dropdown"><?php echo $account_details['firstname'].' '.$account_details['lastname']; ?>
