@@ -187,6 +187,7 @@ if($_GET['dev'] == 'yes'){
         <div class="sh-headpanel-left">
 
             <!-- START: HIDDEN IN MOBILE -->
+            <!--
             <a href="" class="sh-icon-link">
                 <div>
                     <i class="icon ion-ios-folder-outline"></i>
@@ -205,9 +206,11 @@ if($_GET['dev'] == 'yes'){
                     <span>Settings</span>
                 </div>
             </a>
+            -->
             <!-- END: HIDDEN IN MOBILE -->
 
             <!-- START: DISPLAYED IN MOBILE ONLY -->
+            <!--
             <div class="dropdown dropdown-app-list">
                 <a href="" data-toggle="dropdown" class="dropdown-link">
                     <i class="icon ion-ios-keypad tx-18"></i>
@@ -241,45 +244,40 @@ if($_GET['dev'] == 'yes'){
                     </div>
                 </div>
             </div>
+            -->
         </div>
     </div>
 
     <div class="sh-mainpanel">
         <div class="sh-breadcrumb">
             <nav class="breadcrumb">
-                <a class="breadcrumb-item" href="index.html">Shamcey</a>
-                <a class="breadcrumb-item" href="index.html">Pages</a>
-                <span class="breadcrumb-item active">Blank</span>
+                <a class="breadcrumb-item" href="/dashboard">Dashboard</a>
+                <a class="breadcrumb-item" href="/dashboard">Templates</a>
+                <span class="breadcrumb-item active">Sample Page</span>
             </nav>
         </div>
-        <!-- sh-breadcrumb -->
+
         <div class="sh-pagetitle">
             <div class="input-group">
                 <input type="search" class="form-control" placeholder="Search">
                 <span class="input-group-btn">
-            <button class="btn"><i class="fa fa-search"></i></button>
-          </span>
-                <!-- input-group-btn -->
+                    <button class="btn"><i class="fa fa-search"></i></button>
+                </span>
             </div>
-            <!-- input-group -->
+
             <div class="sh-pagetitle-left">
                 <div class="sh-pagetitle-icon"><i class="icon ion-ios-bookmarks mg-t-3"></i></div>
                 <div class="sh-pagetitle-title">
                     <span>Hello World!</span>
                     <h2>Blank Page</h2>
                 </div>
-                <!-- sh-pagetitle-left-title -->
             </div>
-            <!-- sh-pagetitle-left -->
         </div>
-        <!-- sh-pagetitle -->
 
         <div class="sh-pagebody">
-            <!-- content goes here -->
+            Content will go here.
         </div>
-        <!-- sh-pagebody -->
     </div>
-    <!-- sh-mainpanel -->
 
     <script src="lib/jquery/jquery.js"></script>
     <script src="lib/popper.js/popper.js"></script>
