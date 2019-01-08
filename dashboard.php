@@ -50,7 +50,7 @@ if($_GET['dev'] == 'yes'){
     <meta name="twitter:title" content="Shamcey">
     <meta name="twitter:description" content="Premium Quality and Responsive UI for Dashboard.">
     <meta name="twitter:image" content="http://themepixels.me/shamcey/img/shamcey-social.png">
-  -->
+    -->
 
     <!-- Facebook -->
     <meta property="og:url" content="http://themepixels.me/shamcey">
@@ -64,7 +64,7 @@ if($_GET['dev'] == 'yes'){
     <meta property="og:image:height" content="600">
 
     <!-- Meta -->
-    <meta name="description" content="Premium Quality and Responsive UI for Dashboard.">
+    <meta name="description" content="Reach 1.5B Potential Customers Today!">
     <meta name="author" content="Genex Networks LLC">
 
     <title>
@@ -80,7 +80,7 @@ if($_GET['dev'] == 'yes'){
 
 <body>
     <div class="sh-logopanel">
-        <a href="" class="sh-logo-text">Shamcey</a>
+        <a href="" class="sh-logo-text">Jamie</a>
         <a id="navicon" href="" class="sh-navicon d-none d-xl-block"><i class="icon ion-navicon"></i></a>
         <a id="naviconMobile" href="" class="sh-navicon d-xl-none"><i class="icon ion-navicon"></i></a>
     </div>
