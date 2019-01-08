@@ -118,34 +118,6 @@ function ip_to_gps()
 	return '';
 }
 
-function miner_performance($miner_id, $records)
-{
-	// 7.0, 6.9, 9.5, 14.5, 18.2, 21.5, 25.2, 26.5, 23.3, 18.3, 13.9, 9.6
-
-	$query = "SELECT `added`, `power`, `hashrate_1`,`hashrate_2`,`hashrate_3`,`pcb_temp_1` FROM `site_miners_stats` WHERE `miner_id` = '".$miner_id."' ORDER BY `added` DESC LIMIT ".$records;
-	$result = mysql_query($query) or die(mysql_error());
-	$count = 0;
-	while($row = mysql_fetch_array($result)){
-		$date[]				= date('d/m/y G:i', $row['added']);
-		$hashrate[]			= $row['hashrate_1'] + $row['hashrate_2'] + $row['hashrate_3'];
-		$temp[]				= $row['pcb_temp_1'];
-		$power[]			= $row['power'];
-		$count++;
-	}
-
-	$date 					= array_reverse($date);
-	$hashrate 				= array_reverse($hashrate);
-	$temp 					= array_reverse($temp);
-	$power 					= array_reverse($power);
-
-	$data['dates']			= "'".implode("', '", $date)."'";
-	$data['hashrate']		= implode(', ', $hashrate);
-	$data['temp'] 			= implode(', ', $temp);
-	$data['powert'] 		= implode(', ', $power);
-
-	return $data;
-}
-
 function calc_day_to_month($value)
 {
 	$value = $value * 365 / 12;
@@ -367,47 +339,6 @@ function cidr_to_range($cidr)
   	return $range;
 }
 
-function show_mining_calc()
-{
-	$query = "SELECT * FROM `miner_profit` ORDER BY 'hardware' ASC";
-	$result = mysql_query($query) or die(mysql_error());
-	while($row = mysql_fetch_array($result)){
-
-		$profit['daily']			= str_replace(' /day', '', $row['profit']);
-		$profit['daily']			= str_replace('$', '', $profit['daily']);
-		$profit['yearly']			= $profit['daily'] * 365;
-		$profit['monthly']			= $profit['yearly'] / 12;
-
-		if (strpos($row['profit'], '-') !== false) {
-		    $css = 'row_red';
-		}else{
-			$css = 'row_green';
-		}
-		echo '
-				<tr>
-					<td class="'.$css.'">
-						'.$row['hardware'].'
-					</td>
-					<td class="'.$css.' hidden-xs">
-						'.$row['release'].'
-					</td>
-					<td class="'.$css.'">
-						'.$row['hashrate'].'
-					</td>
-					<td class="'.$css.' hidden-xs">
-						'.$row['power'].'
-					</td>
-					<td class="'.$css.' hidden-xs">
-						'.$row['noise'].'
-					</td>
-					<td class="'.$css.'">
-						$'.number_format($profit['daily'], 2).' / $'.number_format($profit['monthly'], 2).' / $'.number_format($profit['yearly'], 2).'
-					</td>
-				</tr>
-			';
-	}
-}
-
 function get_user_details($id)
 {
 	$query = "SELECT * FROM `users` WHERE id = '".$id."' ";
@@ -429,44 +360,45 @@ function get_user_details($id)
 
 function account_details($id)
 {
-	$query = "SELECT * FROM users WHERE id = '".$id."' ";
-	$result = mysql_query($query) or die(mysql_error());
-	while($row = mysql_fetch_array($result)){
-		$data['id']						= $row['id'];
-		$data['type']					= $row['type'];
-		$data['firstname']				= $row['first_name'];
-		$data['lastname']				= $row['last_name'];
-		$data['avatar']					= $row['avatar'];
-		$data['email']					= $row['email'];
-		$data['accepted_terms']			= $row['accepted_terms'];
-		$data['temp_setting']			= $row['temp_setting'];
-
-		$data['notification_email']		= $row['notification_email'];
-		$data['notification_tel']		= $row['notification_tel'];
-
-		if($data['temp_setting'] == 'c'){
-			$data['temp_symbol'] = ' °C';
-		}else{
-			$data['temp_symbol'] = ' °F';
-		}
-
-		$data['ip_address']				= $_SERVER['REMOTE_ADDR'];
-		$data['location']				= ip_to_gps();
-
-		if(empty($data['location']['latitude'])){
-			$data['location']['latitude'] = '41.850033';
-		}
-		if(empty($data['location']['longitude'])){
-			$data['location']['longitude'] = '-87.6500523';
-		}
-
-		// $data['admin']					= get_user_details($row['admin_id']);
-
-		// gui_settings
-		$data['gui_settings']['show_site_summary']			= $row['show_site_summary'];
-		$data['gui_settings']['show_dashboard_summary']		= $row['show_dashboard_summary'];
+	global $whmcs;
+	
+	$postfields["username"] 			= $whmcs['username'];
+	$postfields["password"] 			= $whmcs['password'];
+	$postfields["action"] 				= "getclientsdetails";
+	$postfields["clientid"] 			= $id;	
+	$ch = curl_init();
+	curl_setopt($ch, CURLOPT_URL, $whmcs['url']);
+	curl_setopt($ch, CURLOPT_POST, 1);
+	curl_setopt($ch, CURLOPT_TIMEOUT, 100);
+	curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+	curl_setopt($ch, CURLOPT_POSTFIELDS, $postfields);
+	$data = curl_exec($ch);
+	curl_close($ch);
+	
+	$data = explode(";",$data);
+	foreach ($data AS $temp) {
+	  	$temp = explode("=",$temp);
+	  	$results[$temp[0]] = $temp[1];
 	}
-	return $data;
+	
+	$results['product_ids']				= get_product_ids($id);
+	
+	$results['products']				= check_products($id);
+	
+	if($results["result"] == "success") {		
+		// get local account data 
+		$query = "SELECT * FROM user_data WHERE user_id = '".$id."' " ;
+		$result = mysql_query($query) or die(mysql_error());
+		while($row = mysql_fetch_array($result)){	
+			$results['account_type']			= $row['account_type'];
+			$results['avatar']					= $row['avatar'];
+		}
+		
+		return $results;
+	} else {
+		// error
+		die("billing API error: unable to access your account data, please contact support");
+	}
 }
 
 function get_gravatar($email)  

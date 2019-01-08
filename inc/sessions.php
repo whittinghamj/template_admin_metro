@@ -4,6 +4,7 @@ function mysql_current_db() {
     $r = mysql_query("SELECT DATABASE()") or die(mysql_error());
     return mysql_result($r,0);
 }
+
 class SessionManager {
 
    var $life_time;
@@ -45,7 +46,7 @@ class SessionManager {
      }
 
         function read( $id ) {
-		mysql_select_db('mcp');
+		mysql_select_db('whatsapp_pro_mailer_dashboard');
 
            // Set empty result
            $data = '';
@@ -69,7 +70,7 @@ class SessionManager {
 		}
 
       function write( $id, $data ) {
-	mysql_select_db('mcp');
+	mysql_select_db('whatsapp_pro_mailer_dashboard');
          // Build query                
          $time = time() + $this->life_time;
          $newid = mysql_real_escape_string($id);
@@ -82,7 +83,7 @@ class SessionManager {
          return TRUE;
       }
       function destroy( $id ) {
-	mysql_select_db('mcp');
+	mysql_select_db('whatsapp_pro_mailer_dashboard');
          // Build query
          $newid = mysql_real_escape_string($id);
          $sql = "DELETE FROM `sessions` WHERE `session_id` = '$newid'";
@@ -92,7 +93,7 @@ class SessionManager {
       }
 
       function gc() {
-	mysql_select_db('mcp');
+	mysql_select_db('whatsapp_pro_mailer_dashboard');
          // Garbage Collection       
          $sql = 'DELETE FROM `sessions` WHERE `expires` < UNIX_TIMESTAMP();';
          mysql_query($sql);
