@@ -36,6 +36,8 @@ curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
 curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, false);
 curl_setopt($ch, CURLOPT_POSTFIELDS, $postfields);
 $data = curl_exec($ch);
+if ($data === false) $data = curl_error($ch);
+ echo stripslashes($data);
 
 curl_close($ch);
 
