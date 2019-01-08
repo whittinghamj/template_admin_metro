@@ -474,6 +474,14 @@ if($_GET['dev'] == 'yes'){
     <!-- Just for demonstration -->
     <script src="js/demonstration.min.js"></script>
 
+    <!-- dataTables -->
+    <script src="js/plugins/datatable/jquery.dataTables.min.js"></script>
+    <script src="js/plugins/datatable/TableTools.min.js"></script>
+    <script src="js/plugins/datatable/ColReorder.min.js"></script>
+    <script src="js/plugins/datatable/ColVis.min.js"></script>
+    <script src="js/plugins/datatable/FixedColumns.min.js"></script>
+    <script src="js/plugins/datatable/dataTables.scroller.min.js"></script>
+
     <!--[if lte IE 9]>
         <script src="js/plugins/placeholder/jquery.placeholder.min.js"></script>
         <script>
