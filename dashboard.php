@@ -125,6 +125,21 @@ if($_GET['dev'] == 'yes'){
                 case "test":
                     test();
                     break;
+
+                // profile
+                case "profile":
+                    profile();
+                    break;
+
+                // sending_numbers
+                case "sending_numbers":
+                    sending_numbers();
+                    break;
+
+                // campaigns
+                case "campaigns":
+                    campaigns();
+                    break;
                     
                 // home
                 default:
@@ -134,6 +149,7 @@ if($_GET['dev'] == 'yes'){
         ?>
 
         <?php function home(){ ?>
+            <?php global $account_details; ?>
             <div id="main">
                 <div class="container-fluid">
                     <div class="row">
@@ -156,6 +172,7 @@ if($_GET['dev'] == 'yes'){
         <?php } ?>
 
         <?php function test(){ ?>
+            <?php global $account_details; ?>
             <div id="main">
                 <div class="container-fluid">
                     <div class="row">
@@ -176,6 +193,53 @@ if($_GET['dev'] == 'yes'){
                 </div>
             </div>
         <?php } ?>
+
+        <?php function profile(){ ?>
+            <?php global $account_details; ?>
+            <div id="main">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="box box-color box-bordered">
+                                <div class="box-title">
+                                    <h3>
+                                        <!-- <i class="fa fa-user"></i> -->
+                                        Edit Profile
+                                    </h3>
+                                </div>
+                                <div class="box-content">
+                                    Profile Content
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <?php } ?>
+
+        <?php function campaigns(){ ?>
+            <?php global $account_details; ?>
+            <div id="main">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="box box-color box-bordered">
+                                <div class="box-title">
+                                    <h3>
+                                        <!-- <i class="fa fa-user"></i> -->
+                                        Campaigns
+                                    </h3>
+                                </div>
+                                <div class="box-content">
+                                    Campaign Content
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <?php } ?>
+
     </div>
     <div id="footer">
         <p>
