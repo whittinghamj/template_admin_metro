@@ -1,10 +1,10 @@
 <?php
 
-if($_GET['dev'] == 'yes'){
+// if($_GET['dev'] == 'yes'){
   error_reporting(E_ALL);
   ini_set('display_errors', 1);
   ini_set('error_reporting', E_ALL);
-}
+// }
 
 include("inc/db.php");
 include("inc/global_vars.php");
