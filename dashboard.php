@@ -90,9 +90,11 @@ if($_GET['dev'] == 'yes'){
                         <li>
                             <a href="<?php echo $site['url']; ?>/dashboard?c=profile">Edit profile</a>
                         </li>
-                        <li>
-                            <a href="<?php echo $site['url']; ?>/dashboard?c=settings">Account settings</a>
-                        </li>
+                        <!--
+                            <li>
+                                <a href="<?php echo $site['url']; ?>/dashboard?c=settings">Account settings</a>
+                            </li>
+                        -->
                         <li>
                             <a href="<?php echo $site['url']; ?>/logout">Sign out</a>
                         </li>
@@ -109,10 +111,10 @@ if($_GET['dev'] == 'yes'){
                         <a href="<?php echo $site['url']; ?>/dashboard">Dashboard</a>
                     </li>
                     <li>
-                        <a href="<?php echo $site['url']; ?>/dashboard">Sender Numbers</a>
+                        <a href="<?php echo $site['url']; ?>/dashboard?c=sender_numbers">Sender Numbers</a>
                     </li>
                     <li>
-                        <a href="<?php echo $site['url']; ?>/dashboard">Campaigns</a>
+                        <a href="<?php echo $site['url']; ?>/dashboard?c=campaigns">Campaigns</a>
                     </li>
                 </ul>
             </div>
