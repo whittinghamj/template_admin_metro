@@ -642,11 +642,11 @@ if($_GET['dev'] == 'yes'){
                             <i class="fa fa-angle-right"></i>
                         </li>
                         <li>
-                            <a href="/dashboard?c=dev">Dev</a>
+                            <a href="<?php echo $site['url']; ?>/dashboard?c=dev">Dev Section</a>
                             <i class="fa fa-angle-right"></i>
                         </li>
                         <li>
-                            <a href="#">Template</a>
+                            <a href="<?php echo $site['url']; ?>/dashboard?c=template">Master Template</a>
                         </li>
                     </ul>
                     <div class="close-bread">
