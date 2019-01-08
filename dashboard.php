@@ -84,7 +84,7 @@ if($_GET['dev'] == 'yes'){
             <div class="user">
                 <div class="dropdown">
                     <a href="#" class='dropdown-toggle' data-toggle="dropdown"><?php echo $account_details['firstname'].' '.$account_details['lastname']; ?>
-                        <img src="img/default-avatar.png" height="20px" alt="User Avatar">
+                        <img src="img/default-avatar.png" height="27px" alt="User Avatar">
                     </a>
                     <ul class="dropdown-menu pull-right">
                         <li>
