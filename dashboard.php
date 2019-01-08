@@ -120,30 +120,7 @@ if($_GET['dev'] == 'yes'){
 
         <div id="main">
             <div class="container-fluid">
-                <div class="page-header">
-                    
-                </div>
-
-                <div class="breadcrumbs">
-                    <ul>
-                        <li>
-                            <a href="<?php echo $site['url']; ?>/dashboard">Dashboard</a>
-                            <i class="fa fa-angle-right"></i>
-                        </li>
-                        <li>
-                            <a href="<?php echo $site['url']; ?>/dashboard?c=dev">Dev Section</a>
-                            <i class="fa fa-angle-right"></i>
-                        </li>
-                        <li>
-                            <a href="<?php echo $site['url']; ?>/dashboard?c=template">Master Template</a>
-                        </li>
-                    </ul>
-                    <div class="close-bread">
-                        <a href="#">
-                            <i class="fa fa-times"></i>
-                        </a>
-                    </div>
-                </div>
+                
                 <div class="row">
                     <div class="col-sm-12">
                         <div class="box box-color box-bordered">
